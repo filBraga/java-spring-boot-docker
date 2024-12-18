@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.filipe</groupId>
-	<artifactId>filipe</artifactId>
+	<artifactId>filipespetitions</artifactId>
 	<version>0.0.1</version>
 	<packaging>war</packaging>
 	<name>filipe</name>
@@ -49,6 +49,7 @@
 	</dependencies>
 
 	<build>
+	    <finalName>${project.artifactId}</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
