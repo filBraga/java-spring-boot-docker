@@ -3,6 +3,8 @@ pipeline {
 
     tools{
         git 'Default'
+        mvn 'Default'
+        docker 'Default'
     }
     stages {
         stage('GetProject') {
