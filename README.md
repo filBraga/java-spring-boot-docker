@@ -1,6 +1,6 @@
 # java-spring-boot-docker
 
-# 1 - spting initializr
+# 1 - spring initializr
 
 https://start.spring.io/
 
@@ -29,7 +29,7 @@ Java - 17
 https://www.jenkins.io/doc/tutorials/tutorial-for-installing-jenkins-on-AWS/
 
 ```bash
-sudo yum update –y
+sudo yum update
 ```
 
 ```bash
@@ -95,6 +95,53 @@ sudo service jenkins restart
 
 # 5 - jenkins plugin
 
-Docker
+Install Sugested Plugins
 
-Git
+- Docker
+
+# 6 - jenkins tools
+
+Add the following tools:
+
+Name: Default
+Tool: git
+
+Name: Default
+Tool: maven
+Install: Automatically 3.9.9
+
+Name: Default
+Tool: docker
+Install: Automatically from docker.com @latest
+
+# 7 - running local
+
+### with mvn
+
+```bash
+mvn spring-boot:run
+```
+
+### or build
+
+```bash
+mvn clean compile
+```
+
+```bash
+mvn package
+```
+
+### and run docker
+
+```bash
+docker build -f Dockerfile -t webapp .
+```
+
+```bash
+docker rm -f "webappcontainer" || true
+```
+
+```bash
+docker run --name "webappcontainer" -p 9090:8080 --detach webapp:latest
+```
