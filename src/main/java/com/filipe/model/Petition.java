@@ -13,7 +13,7 @@ public class Petition {
         this.id = id;
         this.title = title;
         this.description = description;
-        this.signatures = signatures;
+        this.signatures = signatures != null ? new ArrayList<>(signatures) : new ArrayList<>();
     }
 
     // Getters and Setters
