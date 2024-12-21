@@ -145,3 +145,7 @@ docker rm -f "webappcontainer" || true
 ```bash
 docker run --name "webappcontainer" -p 9090:8080 --detach webapp:latest
 ```
+
+# Reference
+
+https://medium.com/@mudasirhaji/deploy-a-java-web-app-with-github-jenkins-maven-and-tomcat-on-aws-step-by-step-process-f813c11c9930
